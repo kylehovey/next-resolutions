@@ -60,6 +60,7 @@
   justify-content: flex-start;
   padding-left: 8px;
   column-gap: 4px;
+  text-transform: capitalize;
 }
 
 .progressAmount {
