@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100vh;
-  padding: 5rem 20rem;
+  padding: 0 5%;
 }
 
 .container {
@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 24px;
-  margin-top: 16px;
+  margin-top: 24px;
   width: 100%;
 }
 
@@ -32,7 +32,7 @@
 .resolution {
   display: flex;
   flex-direction: column;
-  row-gap: 8px;
+  row-gap: 12px;
 }
 
 .progressContainer {
@@ -55,7 +55,7 @@
 }
 
 .progressDescription {
-  width: 136px;
+  width: 184px;
   display: flex;
   justify-content: flex-start;
   padding-left: 8px;
