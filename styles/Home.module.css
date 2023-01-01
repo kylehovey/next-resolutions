@@ -14,3 +14,54 @@
   align-items: center;
   width: 100%;
 }
+
+.resolutions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.resolutionTitle {
+  color: var(--gb-dm-fg3);
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.resolution {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.progressContainer {
+  display: flex;
+}
+
+.progressBarContainer {
+  width: 100%;
+  background-color: var(--gb-dm-bg0-hard);
+}
+
+.progressBar {
+  background-color: var(--gb-dm-fg0);
+  height: 20px;
+}
+
+.progressBarCompleted {
+  background-color: var(--gb-dm-dark-green);
+  height: 20px;
+}
+
+.progressDescription {
+  width: 136px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 8px;
+  column-gap: 4px;
+}
+
+.progressAmount {
+  color: var(--gb-dm-light-aqua);
+}
