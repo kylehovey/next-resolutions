@@ -37,11 +37,15 @@
 
 .progressContainer {
   display: flex;
+  flex-wrap: wrap-reverse;
+  row-gap: 4px;
 }
 
 .progressBarContainer {
   width: 100%;
   background-color: var(--gb-dm-bg0-hard);
+  min-width: 300px;
+  padding-right: 8px;
 }
 
 .progressBar {
@@ -58,7 +62,6 @@
   width: 184px;
   display: flex;
   justify-content: flex-start;
-  padding-left: 8px;
   column-gap: 4px;
   text-transform: capitalize;
 }
