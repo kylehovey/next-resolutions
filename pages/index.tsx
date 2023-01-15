@@ -14,7 +14,7 @@ const resolutions: Resolution[] = [
   {
     name: "Read 5 books",
     goal: 5,
-    progress: 0,
+    progress: 1,
     unit: "book",
     plural: "books",
   },
