@@ -14,7 +14,7 @@ const resolutions: Resolution[] = [
   {
     name: "Read 5 books",
     goal: 5,
-    progress: 1,
+    progress: 2,
     unit: "book",
     plural: "books",
   },
@@ -28,7 +28,7 @@ const resolutions: Resolution[] = [
   {
     name: "Squat my own weight",
     goal: 155,
-    progress: 130,
+    progress: 135,
     unit: "lb",
     plural: "lbs",
   },
@@ -56,14 +56,14 @@ const resolutions: Resolution[] = [
   {
     name: "Get VO2 max above 50",
     goal: 50,
-    progress: 38,
+    progress: 39.3,
     unit: "METS",
     plural: "METS",
   },
   {
     name: "Invest ██% of annual income",
     goal: 60,
-    progress: 0,
+    progress: Math.round((0.6059 / 0.6) * (1 / 12) * 100),
     unit: "%",
     plural: "%",
     redacted: true,
