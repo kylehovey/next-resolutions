@@ -68,3 +68,25 @@
 .progressAmount {
   color: var(--gb-dm-light-aqua);
 }
+
+.navigation {
+  display: flex;
+  gap: 10px;
+}
+
+.navigation button {
+  background: none;
+  border: none;
+  color: var(--gb-fg0);
+  margin: 5px;
+  cursor: pointer;
+}
+
+.navigation button:hover {
+  color: var(--gb-dm-dark-green);
+}
+
+.navigation button:disabled {
+  color: var(--gb-dm-fg3);
+  cursor: initial;
+}

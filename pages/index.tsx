@@ -1,90 +1,53 @@
+import { useCallback, useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-
-interface Resolution {
-  name: string;
-  goal: number;
-  progress: number;
-  unit: string;
-  plural: string;
-  redacted?: boolean;
-}
-
-const resolutions: Resolution[] = [
-  {
-    name: "Read 5 books",
-    goal: 5,
-    progress: 6,
-    unit: "book",
-    plural: "books",
-  },
-  {
-    name: "Go on 10 camping/backpacking trips",
-    goal: 10,
-    progress: 5,
-    unit: "camping trip",
-    plural: "camping trips",
-  },
-  {
-    name: "Squat my own weight",
-    goal: 160,
-    progress: 140,
-    unit: "lb",
-    plural: "lbs",
-  },
-  {
-    name: "Create and order a PCB",
-    goal: 1,
-    progress: 0,
-    unit: "PCB",
-    plural: "PCBs",
-  },
-  {
-    name: "Write and record one song",
-    goal: 1,
-    progress: 0,
-    unit: "song",
-    plural: "songs",
-  },
-  {
-    name: "Go on a road trip",
-    goal: 1,
-    progress: 1,
-    unit: "road trip",
-    plural: "road trips",
-  },
-  {
-    name: "Get VO2 max above 50",
-    goal: 50,
-    progress: 40,
-    unit: "METS",
-    plural: "METS",
-  },
-  {
-    name: "Invest ██% of annual income",
-    goal: 60,
-    progress: Math.round(75),
-    unit: "%",
-    plural: "%",
-    redacted: true,
-  },
-];
+import years from "../lib/resolutions";
 
 export default function Home() {
+  const [resolutionsIndex, setResolutionsIndex] = useState(1);
+  const { resolutions, year } = years[resolutionsIndex];
+  const maxIndex = years.length - 1;
+
+  const applyDiff = useCallback(
+    (diff: number) => {
+      const nextVal = resolutionsIndex + diff;
+      setResolutionsIndex(Math.max(0, Math.min(maxIndex, nextVal)));
+    },
+    [resolutionsIndex, maxIndex]
+  );
+
   return (
     <>
       <Head>
-        <title>2023 Resolutions</title>
+        <title>{year} Resolutions</title>
         <meta
           name="description"
-          content="Kyle Hovey's 2023 New Years Resolutions"
+          content={`Kyle Hovey's ${year} New Years Resolutions`}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
         <div className={styles.container}>
-          <h1>2023 Resolutions</h1>
+          <h1>{year} Resolutions</h1>
+          <div className={styles.navigation}>
+            <button
+              disabled={resolutionsIndex === 0}
+              type="button"
+              aria-label="See previous year's resolutions."
+              onClick={() => applyDiff(-1)}
+            >
+              ← Previous
+            </button>
+            <button
+              disabled={resolutionsIndex === maxIndex}
+              type="button"
+              aria-label="See next year's resolutions."
+              onClick={() => applyDiff(1)}
+            >
+              Next →
+            </button>
+          </div>
           <hr />
           <div className={styles.resolutions}>
             {resolutions.map((resolution) => (
