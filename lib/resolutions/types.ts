@@ -5,6 +5,7 @@ export interface Resolution {
   unit: string;
   plural: string;
   redacted?: boolean;
+  success?: (progress: number) => boolean;
 }
 
 export interface Resolutions {

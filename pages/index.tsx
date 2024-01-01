@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import years from "../lib/resolutions";
+import years, { isCompleted } from "../lib/resolutions";
 
 export default function Home() {
   const [resolutionsIndex, setResolutionsIndex] = useState(1);
@@ -59,7 +59,7 @@ export default function Home() {
                   <div className={styles.progressBarContainer}>
                     <div
                       className={
-                        resolution.progress >= resolution.goal
+                        isCompleted(resolution)
                           ? styles.progressBarCompleted
                           : styles.progressBar
                       }

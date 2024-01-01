@@ -52,11 +52,19 @@ const resolutions: Resolution[] = [
   },
   {
     name: "Invest ██% of annual income",
-    goal: 60,
+    goal: 80,
     progress: Math.round((0 / 12) * 0 * 100),
     unit: "%",
     plural: "%",
     redacted: true,
+  },
+  {
+    name: "Get monthly shopping budget lower than grocery budget",
+    goal: 100,
+    progress: 0,
+    unit: "% of grocery",
+    plural: "% of grocery",
+    success: (value) => value < 100,
   },
 ];
 
