@@ -21,7 +21,7 @@ const resolutions: Resolution[] = [
   {
     name: "Go on 10 camping/backpacking trips",
     goal: 10,
-    progress: 3,
+    progress: 5,
     unit: "camping trip",
     plural: "camping trips",
   },
@@ -56,14 +56,14 @@ const resolutions: Resolution[] = [
   {
     name: "Get VO2 max above 50",
     goal: 50,
-    progress: 39.9,
+    progress: 40,
     unit: "METS",
     plural: "METS",
   },
   {
     name: "Invest ██% of annual income",
     goal: 60,
-    progress: Math.round((0.6763 / 0.6) * 100),
+    progress: Math.round(75),
     unit: "%",
     plural: "%",
     redacted: true,
