@@ -2,6 +2,13 @@ import type { Resolution } from "./types";
 
 const resolutions: Resolution[] = [
   {
+    name: "Publish 1 Paper in a Math Journal",
+    goal: 1,
+    progress: 0,
+    unit: "Paper",
+    plural: "Papers",
+  },
+  {
     name: "Read 5 books",
     goal: 5,
     progress: 0,
